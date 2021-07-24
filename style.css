@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+   background-color: rgb(218, 100, 16);
+    margin: 0;
+    font-family: Electrolize;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+header{
+    background-color: rgb(138, 63, 10);
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+.search {
+    background-color: transparent;
+    border: 2px solid rgb(218, 100, 16);
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+}
+.search::placeholder {
+    color: rgb(177, 106, 55);
+}
+.search:focus  {
+    background-color: rgb(184, 84, 13);
+    outline: none;
+}
+.movie {
+    border-radius: 3px;
+    overflow: hidden;
+    width: 300px;
+    position: relative;
+    margin: 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 5px rgb(138, 63, 10);
+}
+.movie img {
+    width: 100%;
+    
+} 
+.movie-info {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1rem 1rem;
+    background-color: rgb(218, 100, 16);
+    color: #eee;
+    letter-spacing: 1px;
+}
+
+.movie-info span {
+    background-color: rgb(218, 100, 16);
+    border-radius: 3px;
+    font-weight: bold;
+   padding: 1rem;
+}
+.movie-info span.orange {
+    color: orange;
+}
+.movie-info span.green {
+    color: green;
+}
+.movie-info span.red {
+    color: red;
+}
+.overview {
+    position: absolute;
+    background-color: white;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 2rem;
+    max-height: 100%;
+    overflow: auto;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in;
+}
+.movie:hover .overview{
+    transform: translateY(0);
+}
